@@ -1,3 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+.hero{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero_content {
+    min-height: 100vh;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    will-change: transform, opacity;
+}
+
+.hero_content > * {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.intro {
+  text-align: left;
+  margin-left: 4rem;
+}
+
+.description {
+  text-align: right;
+  margin-right: 4rem;
+}
+
+.availabilityBadge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #0f172a;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.15),
+    rgba(59, 130, 246, 0.15)
+  );
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  backdrop-filter: blur(6px);
+  animation: pulseGlow 2.5s infinite;
+  width: fit-content;
+}
+
+.availabilityBadge .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.availabilityBadge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.hero_content h3 {
+  font-size: 1.3rem;
+  font-weight: 100;
+  color: #000000;
+}
+
+.heroTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 0.85;
+  text-rendering: optimizeLegibility;
+}
+
+.socialMedia a,
+.contactButton {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.heroTitle h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: clamp(4rem, 14vw, 12rem);
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+
+#frontend { 
+  color: #000; 
+  margin-bottom: -3rem;
+  margin-top: -2rem;
+} 
+
+#developer { 
+  color: white;
+  text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
 }
 
 .socialMedia {
@@ -50,23 +168,4 @@
   .description {
     font-size: 0.95rem;
   }
-}
-  box-shadow: 0 0 20px #34d39966;
-}
-
-
-@media (max-width: 768px) {
-  .hero_content h1 { font-size: 2.5rem; }
-  .hero_content h2 { font-size: 1.25rem; }
-  .socialMedia { gap: 0.75rem; }
-}
-
-@media (max-width: 480px) {
-  .hero_content {
-    padding: 3rem 1rem;
-  }
-  .hero_content h1 { font-size: 2rem; }
-  .hero_content h2 { font-size: 1rem; }
-  .socialMedia { gap: 0.5rem; }
-  .contactButton { padding: 0.5rem 1.5rem; }
 }

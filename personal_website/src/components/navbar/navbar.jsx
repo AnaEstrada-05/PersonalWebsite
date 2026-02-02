@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import './navbar.css';
-import logo from '../../assets/logo.png';
-import React, { useState } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
-import './navbar.css';
-import logo from '../../assets/logo.png';
-
 
 const navItems = [
   { id: 'home', label: 'Home' },
@@ -64,9 +58,8 @@ const Navbar = () => {
         </ul>
 
       </div>
-      </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

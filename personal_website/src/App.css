@@ -1,3 +1,4 @@
+/* Reset y base */
 *,
 *::before,
 *::after {
@@ -29,8 +30,8 @@ a {
   min-height: 100vh; 
   text-align: center;
   background-color: #ececec;
+  color: #272e36; 
 }
-
 
 .logo {
   height: 4em;
@@ -57,4 +58,12 @@ a {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
 }

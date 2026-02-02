@@ -3,17 +3,6 @@
 .navbar {
   display: flex;
   align-items: center;
-
-nav.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  width: 100%;
-  position: relative;
-  z-index: 20;
-}
-
   padding: 1rem 2rem;
   width: 100%;
   position: sticky;
@@ -41,32 +30,17 @@ nav.navbar {
   z-index: 25;
 }
 
-.logo {
-  height: 3.5rem;
-  cursor: pointer;
-  transition: filter 0.3s;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 0.8em #646cffaa);
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-  color: #cbd5e1;
-  z-index: 25; 
-}
-
-
 .navbarContent {
+  list-style: none;
   display: flex;
   gap: 2rem;
-  list-style: none;
+  margin-right: 7rem;
 }
 
 .navLink {
-  position: relative;
+  position: relative; 
+  text-decoration: none;
+  color: #cbd5e1; 
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -74,7 +48,7 @@ nav.navbar {
   transition: color 0.25s;
 }
 
-
+/* Home */
 .navbarContent li:nth-child(1) .navLink:hover {
   color: #3b82f6;
 }
@@ -82,7 +56,7 @@ nav.navbar {
   background: linear-gradient(to right, #60a5fa, #3b82f6);
 }
 
-
+/* About */
 .navbarContent li:nth-child(2) .navLink:hover {
   color: #34d399;
 }
@@ -90,7 +64,7 @@ nav.navbar {
   background: linear-gradient(to right, #6ee7b7, #34d399);
 }
 
-
+/* Projects */
 .navbarContent li:nth-child(3) .navLink:hover {
   color: #f87171;
 }
@@ -98,23 +72,17 @@ nav.navbar {
   background: linear-gradient(to right, #fca5a5, #f87171);
 }
 
+/* Skills */
 .navbarContent li:nth-child(4) .navLink:hover {
   color: #a78bfa;
 }
 .navbarContent li:nth-child(4) .underline {
   background: linear-gradient(to right, #c4b5fd, #a78bfa);
-
-  color: #cbd5e1;
-  transition: color 0.25s;
-}
-
-.navLink:hover {
-  color: #34d399;
 }
 
 .underline {
   position: absolute;
-  bottom: -4px;
+  bottom: -6px;
   left: 0;
   height: 2px;
   width: 0;
@@ -124,6 +92,7 @@ nav.navbar {
 .navLink:hover .underline {
   width: 100%;
 }
+
 
 .navbarButton {
   position: relative;
@@ -139,7 +108,7 @@ nav.navbar {
   transition: color 0.35s ease;
 }
 
-
+/* capa animada */
 .navbarButton::before {
   content: "";
   position: absolute;
@@ -166,18 +135,16 @@ nav.navbar {
   display: none;
 }
 
-/* === Móvil === */
+/* === MÓVIL === */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
   }
 
-  
   .navbarContent {
     display: none;
   }
 
- 
   .mobileMenu {
     position: fixed;
     top: 0;
@@ -211,8 +178,11 @@ nav.navbar {
   }
 
   .mobileMenu a {
+    font-family: var(--font-navbar);
     font-size: 1.5rem;
     font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: #cbd5e1;
     transition: color 0.3s;
   }
