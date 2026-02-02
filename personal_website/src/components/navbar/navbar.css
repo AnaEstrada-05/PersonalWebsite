@@ -1,18 +1,8 @@
-<<<<<<< Updated upstream
-nav {
-  width: 100vw;
-=======
 @import "../fonts.css";
 
 .navbar {
->>>>>>> Stashed changes
   display: flex;
   align-items: center;
-<<<<<<< Updated upstream
-  justify-content: space-between;
-}
-
-=======
   padding: 1rem 2rem;
   width: 100%;
   position: sticky;
@@ -40,7 +30,6 @@ nav {
   z-index: 25;
 }
 
->>>>>>> Stashed changes
 .navbarContent {
   list-style: none;
   display: flex;
@@ -53,14 +42,6 @@ nav {
   text-decoration: none;
   color: #cbd5e1; 
   font-weight: 600;
-<<<<<<< Updated upstream
-  padding: 4px 0;
-  transition: color 0.25s ease;
-}
-
-.navLink:hover {
-  color: #34d399; 
-=======
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #272e36;
@@ -78,7 +59,6 @@ nav {
 /* About */
 .navbarContent li:nth-child(2) .navLink:hover {
   color: #34d399;
->>>>>>> Stashed changes
 }
 .navbarContent li:nth-child(2) .underline {
   background: linear-gradient(to right, #6ee7b7, #34d399);
@@ -112,8 +92,7 @@ nav {
 .navLink:hover .underline {
   width: 100%;
 }
-<<<<<<< Updated upstream
-=======
+
 
 .navbarButton {
   position: relative;
@@ -212,4 +191,3 @@ nav {
     color: #34d399;
   }
 }
->>>>>>> Stashed changes
