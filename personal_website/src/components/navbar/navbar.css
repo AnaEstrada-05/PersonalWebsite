@@ -1,33 +1,54 @@
-nav {
-  width: 100vw;
+/* Navbar general */
+nav.navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  position: relative;
+  z-index: 20;
 }
 
+/* Logo */
+.logo {
+  height: 3.5rem;
+  cursor: pointer;
+  transition: filter 0.3s;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 0.8em #646cffaa);
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: #cbd5e1;
+  z-index: 25; /* encima del menú */
+}
+
+/* Navbar desktop */
 .navbarContent {
-  list-style: none;
   display: flex;
   gap: 2rem;
-  margin-right: 7rem;
+  list-style: none;
 }
 
 .navLink {
-  position: relative; 
-  text-decoration: none;
-  color: #cbd5e1; 
+  position: relative;
   font-weight: 600;
-  padding: 4px 0;
-  transition: color 0.25s ease;
+  color: #cbd5e1;
+  transition: color 0.25s;
 }
 
 .navLink:hover {
-  color: #34d399; 
+  color: #34d399;
 }
 
 .underline {
   position: absolute;
-  bottom: -6px;
+  bottom: -4px;
   left: 0;
   height: 2px;
   width: 0;
@@ -37,4 +58,64 @@ nav {
 
 .navLink:hover .underline {
   width: 100%;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+/* === Móvil === */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  /* Desktop menu se mantiene, pero se puede ocultar opcionalmente con CSS si quieres solo mobile */
+  .navbarContent {
+    display: none;
+  }
+
+  /* Menú fullscreen móvil */
+  .mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 15;
+  }
+
+  .mobileMenu.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .mobileMenu ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobileMenu li {
+    margin: 1.5rem 0;
+  }
+
+  .mobileMenu a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #cbd5e1;
+    transition: color 0.3s;
+  }
+
+  .mobileMenu a:hover {
+    color: #34d399;
+  }
 }
