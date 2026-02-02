@@ -38,17 +38,16 @@ This portfolio highlights my **professional journey and front-end skills**:
 
 ---
 
-## 📝 Sections & Visuals
+## 📝 Sections
 
-| Section | Description | Preview |
-|---------|-------------|---------|
-| **Home** | Landing page with animated hero and introduction | ![Home](./gifs/home.gif) |
-| **About** | Background, experience, achievements | ![About](./gifs/about.gif) |
-| **Projects** | Showcase of projects with links | ![Projects](./gifs/projects.gif) |
-| **Skills** | Technical skills & tools | ![Skills](./gifs/skills.gif) |
-| **Contact** | Social media & email links | ![Contact](./gifs/contact.gif) |
+| Section | Description |
+|---------|-------------|
+| **Home** | Landing page with animated hero and introduction | 
+| **About** | Background, experience, achievements | 
+| **Projects** | Showcase of projects with links | 
+| **Skills** | Technical skills & tools | 
+| **Contact** | Social media & email links | 
 
-*(Replace GIFs with your actual animated screenshots or demo videos.)*  
 
 ---
 
@@ -60,29 +59,6 @@ This portfolio highlights my **professional journey and front-end skills**:
 - **React Icons & Lucide Icons** – Icons for UI and social media  
 
 ---
-
-## 🚀 Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/AnaEstrada-05/portfolio.git
-```
-
-Navigate to the project folder:
-```bash
-cd portfolio
-```
-
-Install dependencies:
-```bash
-npm install
-```
-
-Start the development server:
-```bash
-npm start
-```
 
 ## 💡 Usage
 
