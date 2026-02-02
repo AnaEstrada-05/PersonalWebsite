@@ -12,9 +12,24 @@ const navItems = [
 ]
 
 const Navbar = () => {
+  const handleLogoClick = () => {
+    if (window.location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      window.location.reload()
+    } else {
+      window.location.href = '/'
+    }
+  }
+
   return (
     <nav className="navbar">
-        <img src={logo} alt="Logo" className="logo" />
+        <img
+          src={logo}
+          alt="Logo"
+          className="logo"
+          onClick={handleLogoClick}
+          style={{ cursor: 'pointer' }}
+        />
         <ul className="navbarContent">
             {navItems.map((item, index) => (
             <motion.li
