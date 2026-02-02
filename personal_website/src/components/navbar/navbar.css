@@ -1,0 +1,40 @@
+nav {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbarContent {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-right: 7rem;
+}
+
+.navLink {
+  position: relative; 
+  text-decoration: none;
+  color: #cbd5e1; 
+  font-weight: 600;
+  padding: 4px 0;
+  transition: color 0.25s ease;
+}
+
+.navLink:hover {
+  color: #34d399; 
+}
+
+.underline {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(to right, #34d399, #3b82f6);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover .underline {
+  width: 100%;
+}
