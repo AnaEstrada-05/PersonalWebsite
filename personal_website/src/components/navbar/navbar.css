@@ -1,10 +1,46 @@
+<<<<<<< Updated upstream
 nav {
   width: 100vw;
+=======
+@import "../fonts.css";
+
+.navbar {
+>>>>>>> Stashed changes
   display: flex;
   align-items: center;
+<<<<<<< Updated upstream
   justify-content: space-between;
 }
 
+=======
+  padding: 1rem 2rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: var(--font-navbar);
+  background: white;
+  transition: box-shadow 0.3s ease;
+}
+.navbar.scrolled {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbarLogo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #272e36;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: #272e36;
+  z-index: 25;
+}
+
+>>>>>>> Stashed changes
 .navbarContent {
   list-style: none;
   display: flex;
@@ -17,12 +53,51 @@ nav {
   text-decoration: none;
   color: #cbd5e1; 
   font-weight: 600;
+<<<<<<< Updated upstream
   padding: 4px 0;
   transition: color 0.25s ease;
 }
 
 .navLink:hover {
   color: #34d399; 
+=======
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #272e36;
+  transition: color 0.25s;
+}
+
+/* Home */
+.navbarContent li:nth-child(1) .navLink:hover {
+  color: #3b82f6;
+}
+.navbarContent li:nth-child(1) .underline {
+  background: linear-gradient(to right, #60a5fa, #3b82f6);
+}
+
+/* About */
+.navbarContent li:nth-child(2) .navLink:hover {
+  color: #34d399;
+>>>>>>> Stashed changes
+}
+.navbarContent li:nth-child(2) .underline {
+  background: linear-gradient(to right, #6ee7b7, #34d399);
+}
+
+/* Projects */
+.navbarContent li:nth-child(3) .navLink:hover {
+  color: #f87171;
+}
+.navbarContent li:nth-child(3) .underline {
+  background: linear-gradient(to right, #fca5a5, #f87171);
+}
+
+/* Skills */
+.navbarContent li:nth-child(4) .navLink:hover {
+  color: #a78bfa;
+}
+.navbarContent li:nth-child(4) .underline {
+  background: linear-gradient(to right, #c4b5fd, #a78bfa);
 }
 
 .underline {
@@ -31,10 +106,110 @@ nav {
   left: 0;
   height: 2px;
   width: 0;
-  background: linear-gradient(to right, #34d399, #3b82f6);
   transition: width 0.3s ease;
 }
 
 .navLink:hover .underline {
   width: 100%;
 }
+<<<<<<< Updated upstream
+=======
+
+.navbarButton {
+  position: relative;
+  padding: 0.5rem 1.2rem;
+  border: 2px solid #272e36;
+  border-radius: 30px;
+  font-weight: 600;
+  background: transparent;
+  color: #272e36;
+  cursor: pointer;
+  overflow: hidden;
+
+  transition: color 0.35s ease;
+}
+
+/* capa animada */
+.navbarButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #3b82f6, #34d399);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.navbarButton:hover::before {
+  transform: scaleX(1);
+}
+
+.navbarButton:hover {
+  color: #ffffff;
+  border-color: transparent;
+}
+
+
+
+.mobileMenu {
+  display: none;
+}
+
+/* === MÓVIL === */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbarContent {
+    display: none;
+  }
+
+  .mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 15;
+  }
+
+  .mobileMenu.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .mobileMenu ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobileMenu li {
+    margin: 1.5rem 0;
+  }
+
+  .mobileMenu a {
+    font-family: var(--font-navbar);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #cbd5e1;
+    transition: color 0.3s;
+  }
+
+  .mobileMenu a:hover {
+    color: #34d399;
+  }
+}
+>>>>>>> Stashed changes

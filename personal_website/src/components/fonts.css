@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Oswald:wght@200..700&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+:root {
+  /* Tipografías base */
+  --font-heading: "Oswald", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-navbar: "Roboto Condensed", sans-serif;
+
+  /* Tipografías decorativas */
+  --font-loader: "Dosis", sans-serif;
+  --font-fun: "Luckiest Guy", cursive;
+  --font-impact: "Yanone Kaffeesatz", sans-serif;
+}
+
+/* Utilidades */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-navbar {
+  font-family: var(--font-navbar);
+}
+
+.font-loader {
+  font-family: var(--font-loader);
+}
+
+.font-fun {
+  font-family: var(--font-fun);
+}
+
+.font-impact {
+  font-family: var(--font-impact);
+}
