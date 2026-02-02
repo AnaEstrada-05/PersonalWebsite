@@ -1,81 +1,60 @@
-.hero_content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 4rem 1rem;
-  gap: 1.5rem;
-  width: 100%;
-  min-height: 80vh; /* ocupa casi toda la pantalla */
-}
-
-.availabilityBadge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: linear-gradient(to right, #10b9811a, #3b82f61a);
-  border: 1px solid #10b98150;
-  border-radius: 9999px;
-  font-weight: 500;
-  color: #10b981;
-}
-
-.hero_content h1 {
-  font-size: 3rem;
-  margin: 0;
-  color: #fff;
-}
-
-.hero_content h2 {
-  font-size: 1.5rem;
-  margin: 0;
-  color: #34d399;
-}
-
-.description {
-  max-width: 90%; /* ocupa casi todo el ancho en móviles */
-  font-size: 1rem;
-  color: #cbd5e1;
 }
 
 .socialMedia {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   margin-top: 1rem;
-  flex-wrap: wrap; /* ajusta en móviles */
   justify-content: center;
 }
 
-.socialLink {
+.socialMedia a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  border: 1px solid transparent;
-  transition: all 0.3s;
+  padding: 0.7rem;
+  border-radius: 0.6rem;
+  border: 1px solid #e5e7eb;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+.socialMedia a:hover {
+  transform: scale(1.1);
+  background: #000;
+  color: white;
 }
 
 .contactButton {
   margin-top: 2rem;
-  padding: 0.75rem 2rem;
-  border-radius: 0.5rem;
-  background: linear-gradient(to right, #10b981, #3b82f6);
-  color: white;
-  font-weight: 600;
+  padding: 0.75rem 2.2rem;
+  border-radius: 0.6rem;
   border: none;
+  font-weight: 600;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: black;
+  color: white;
+  transition: all 0.3s ease;
+  width: fit-content;
 }
 
 .contactButton:hover {
   transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .heroTitle h1 {
+    font-size: clamp(3rem, 18vw, 6rem);
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
   box-shadow: 0 0 20px #34d39966;
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
   .hero_content h1 { font-size: 2.5rem; }
   .hero_content h2 { font-size: 1.25rem; }

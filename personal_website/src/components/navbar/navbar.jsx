@@ -1,38 +1,36 @@
+import React, { useState, useEffect } from 'react';
+import { FiMenu, FiX } from 'react-icons/fi';
+import './navbar.css';
+import logo from '../../assets/logo.png';
 import React, { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import './navbar.css';
 import logo from '../../assets/logo.png';
 
+
 const navItems = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'skills', label: 'Skills' }
 ];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false)
 
-  const handleLogoClick = () => {
-    if (window.location.pathname === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      window.location.reload();
-    } else {
-      window.location.href = '/';
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0)
     }
-  };
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <nav className="navbar">
-      <img
-        src={logo}
-        alt="Logo"
-        className="logo"
-        onClick={handleLogoClick}
-      />
-
-      {/* Botón hamburguesa solo móvil */}
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <h3 className="navbarLogo">PORTFOLIO</h3>
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
       </div>
@@ -48,8 +46,9 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      <button className="navbarButton">CONTACT ME →</button>
 
-      {/* Menú fullscreen móvil */}
+      {/* Menú móvil */}
       <div className={`mobileMenu ${menuOpen ? 'open' : ''}`}>
         <ul>
           {navItems.map((item) => (
@@ -63,6 +62,8 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+      </div>
       </div>
     </nav>
   );

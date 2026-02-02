@@ -1,4 +1,9 @@
-/* Navbar general */
+@import "../fonts.css";
+
+.navbar {
+  display: flex;
+  align-items: center;
+
 nav.navbar {
   display: flex;
   justify-content: space-between;
@@ -9,7 +14,33 @@ nav.navbar {
   z-index: 20;
 }
 
-/* Logo */
+  padding: 1rem 2rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: var(--font-navbar);
+  background: white;
+  transition: box-shadow 0.3s ease;
+}
+.navbar.scrolled {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbarLogo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #272e36;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: #272e36;
+  z-index: 25;
+}
+
 .logo {
   height: 3.5rem;
   cursor: pointer;
@@ -20,15 +51,14 @@ nav.navbar {
   filter: drop-shadow(0 0 0.8em #646cffaa);
 }
 
-/* Botón hamburguesa */
 .hamburger {
   display: none;
   cursor: pointer;
   color: #cbd5e1;
-  z-index: 25; /* encima del menú */
+  z-index: 25; 
 }
 
-/* Navbar desktop */
+
 .navbarContent {
   display: flex;
   gap: 2rem;
@@ -38,6 +68,42 @@ nav.navbar {
 .navLink {
   position: relative;
   font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #272e36;
+  transition: color 0.25s;
+}
+
+
+.navbarContent li:nth-child(1) .navLink:hover {
+  color: #3b82f6;
+}
+.navbarContent li:nth-child(1) .underline {
+  background: linear-gradient(to right, #60a5fa, #3b82f6);
+}
+
+
+.navbarContent li:nth-child(2) .navLink:hover {
+  color: #34d399;
+}
+.navbarContent li:nth-child(2) .underline {
+  background: linear-gradient(to right, #6ee7b7, #34d399);
+}
+
+
+.navbarContent li:nth-child(3) .navLink:hover {
+  color: #f87171;
+}
+.navbarContent li:nth-child(3) .underline {
+  background: linear-gradient(to right, #fca5a5, #f87171);
+}
+
+.navbarContent li:nth-child(4) .navLink:hover {
+  color: #a78bfa;
+}
+.navbarContent li:nth-child(4) .underline {
+  background: linear-gradient(to right, #c4b5fd, #a78bfa);
+
   color: #cbd5e1;
   transition: color 0.25s;
 }
@@ -52,13 +118,49 @@ nav.navbar {
   left: 0;
   height: 2px;
   width: 0;
-  background: linear-gradient(to right, #34d399, #3b82f6);
   transition: width 0.3s ease;
 }
 
 .navLink:hover .underline {
   width: 100%;
 }
+
+.navbarButton {
+  position: relative;
+  padding: 0.5rem 1.2rem;
+  border: 2px solid #272e36;
+  border-radius: 30px;
+  font-weight: 600;
+  background: transparent;
+  color: #272e36;
+  cursor: pointer;
+  overflow: hidden;
+
+  transition: color 0.35s ease;
+}
+
+
+.navbarButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #3b82f6, #34d399);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.navbarButton:hover::before {
+  transform: scaleX(1);
+}
+
+.navbarButton:hover {
+  color: #ffffff;
+  border-color: transparent;
+}
+
+
 
 .mobileMenu {
   display: none;
@@ -70,12 +172,12 @@ nav.navbar {
     display: block;
   }
 
-  /* Desktop menu se mantiene, pero se puede ocultar opcionalmente con CSS si quieres solo mobile */
+  
   .navbarContent {
     display: none;
   }
 
-  /* Menú fullscreen móvil */
+ 
   .mobileMenu {
     position: fixed;
     top: 0;
