@@ -10,56 +10,83 @@ const navItems = [
 ];
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false)
 
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Detect scroll para estilo navbar
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 0)
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // ⭐ Scroll con offset para navbar fixed
+  const handleScrollToSection = (id) => {
+
+    const element = document.getElementById(id);
+    const offset = 90; // altura navbar (ajusta si quieres)
+
+    if (element) {
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    setMenuOpen(false);
+  };
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+
       <h3 className="navbarLogo">PORTFOLIO</h3>
+
+      {/* HAMBURGER */}
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
       </div>
 
-      {/* Menú desktop */}
+      {/* DESKTOP MENU */}
       <ul className="navbarContent">
         {navItems.map((item) => (
           <li key={item.id}>
-            <a href={`#${item.id}`} className="navLink">
+            <button
+              className="navLink"
+              onClick={() => handleScrollToSection(item.id)}
+            >
               {item.label}
               <span className="underline" />
-            </a>
+            </button>
           </li>
         ))}
       </ul>
+
       <button className="navbarButton">CONTACT ME →</button>
 
-      {/* Menú móvil */}
+      {/* MOBILE MENU */}
       <div className={`mobileMenu ${menuOpen ? 'open' : ''}`}>
         <ul>
           {navItems.map((item) => (
             <li key={item.id}>
-              <a
-                href={`#${item.id}`}
-                onClick={() => setMenuOpen(false)}
-              >
+              <button onClick={() => handleScrollToSection(item.id)}>
                 {item.label}
-              </a>
+              </button>
             </li>
           ))}
         </ul>
-
       </div>
-    </nav>
-  )
-}
 
-export default Navbar
+    </nav>
+  );
+};
+
+export default Navbar;

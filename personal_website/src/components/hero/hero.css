@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+@import url("../../components/fonts.css");
 
 .hero{
   width: 100%;
@@ -95,12 +95,12 @@
 }
 
 .socialMedia a,
-.contactButton {
+.contactButton, .resumeButton {
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .heroTitle h1 {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   font-weight: 900;
   font-size: clamp(4rem, 14vw, 12rem);
   letter-spacing: -0.05em;
@@ -142,23 +142,38 @@
   color: white;
 }
 
-.contactButton {
-  margin-top: 2rem;
-  padding: 0.75rem 2.2rem;
-  border-radius: 0.6rem;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  background: black;
-  color: white;
-  transition: all 0.3s ease;
-  width: fit-content;
-}
-
-.contactButton:hover {
+.contactButton:hover, .resumeButton:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
+
+.heroButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contactButton,
+.resumeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  height: 48px;   /* fuerza misma altura */
+  padding: 0 2rem;
+
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
 
 @media (max-width: 768px) {
   .heroTitle h1 {

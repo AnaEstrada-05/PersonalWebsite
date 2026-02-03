@@ -1,0 +1,125 @@
+@import url("../../components/fonts.css");
+
+.skillsContainer{
+    background-color: black;
+    padding: 3rem 5rem;
+    height: 51rem;
+    scroll-margin-top: 100px;
+}
+
+.skillsSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scale: 1.2;
+    margin-top: 3rem;
+    height: 26rem;
+}
+
+.skillsContainer h1 {
+    font-family: var(--font-heading);
+    text-align: left;
+    margin: 0;
+}
+
+.title {
+    font-size: 2rem;
+    width: fit-content;
+}
+
+#t1{
+    color: white;
+}
+
+#t2{
+    background: linear-gradient(90deg, #3b82f6, #4fd587);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.buttonsContainer{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.skillsButton{
+    padding: 0.6rem 1.8rem;
+    border-radius: 999px;
+    border: 1.5px solid;
+    font-size: 0.9rem;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+
+.skillsButton:hover{
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+.skillsButton.active{
+    box-shadow: 0 0 15px rgba(255,255,255,0.15);
+}
+
+.skillsContent{
+    margin-top: 3rem;
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    max-width: 60rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.skillsCard{
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.5rem 1.2rem;
+    display: flex;
+    min-height: 8rem;
+    min-width: 14rem;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.skillsCard:hover{
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+.skillIcon{
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 0.9rem;
+}
+
+
+.skillsCard p{
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#skillLevel{
+    font-size: 0.8rem;
+    color: #babfc8;
+    font-weight: 100;
+    margin-top: -1vw;
+}

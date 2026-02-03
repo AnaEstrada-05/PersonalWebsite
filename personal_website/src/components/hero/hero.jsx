@@ -1,56 +1,27 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail } from "lucide-react";
+import { Mail, Download } from "lucide-react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import "./hero.css";
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.3,
-    },
-  },
-};
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
-  },
-};
-
-const fadeLeft = {
-  hidden: { opacity: 0, x: -40 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
-  },
-};
-
-const fadeRight = {
-  hidden: { opacity: 0, x: 40 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
-  },
-};
+import {
+  fadeUp,
+  fadeLeft,
+  fadeRight,
+  containerStagger
+} from "../../animations/animations";
 
 const Hero = () => {
   return (
     <div className="hero">
       <motion.section
         className="hero_content"
-        variants={containerVariants}
+        variants={containerStagger}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
       >
-        {/* Badge */}
+
         <motion.div
           className="availabilityBadge"
           variants={fadeUp}
@@ -60,38 +31,24 @@ const Hero = () => {
           Available for new opportunities
         </motion.div>
 
-        {/* Intro */}
         <motion.h3 className="intro" variants={fadeLeft}>
           Hello! My name is Ana and I'm a
         </motion.h3>
 
-        {/* Title */}
         <div className="heroTitle">
-          <motion.h1
-            id="frontend"
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
+          <motion.h1 id="frontend" variants={fadeUp}>
             Front End
           </motion.h1>
 
-          <motion.h1
-            id="developer"
-            initial={{ opacity: 0, y: -60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
-          >
+          <motion.h1 id="developer" variants={fadeUp}>
             Developer
           </motion.h1>
         </div>
 
-        {/* Description */}
         <motion.h3 className="description" variants={fadeRight}>
           Based in Chihuahua, Mexico
         </motion.h3>
 
-        {/* Socials */}
         <motion.div className="socialMedia" variants={fadeUp}>
           {[FaGithub, FaLinkedin, Mail].map((Icon, index) => (
             <motion.a
@@ -113,15 +70,27 @@ const Hero = () => {
           ))}
         </motion.div>
 
-        {/* Button */}
-        <motion.button
-          className="contactButton"
-          variants={fadeUp}
-          whileHover={{ scale: 1.08 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          View My Work
-        </motion.button>
+        <motion.div className="heroButtons" variants={fadeUp}>
+          <motion.button
+            className="contactButton"
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            View My Work →
+          </motion.button>
+
+          <motion.a
+            href="/Resume_AnaEstrada.pdf"
+            download="Ana_Estrada_CV.pdf"
+            className="resumeButton"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Download size={18} />
+            Resume
+          </motion.a>
+        </motion.div>
+
       </motion.section>
     </div>
   );
