@@ -1,0 +1,382 @@
+export const t = {
+  en: {
+    nav: {
+      home: "Home",
+      about: "About",
+      projects: "Projects",
+      skills: "Skills",
+      contact: "Contact Me →",
+    },
+    hero: {
+      available: "Available for new opportunities",
+      greeting: "Hello! My name is Ana and I'm a",
+      title1: "Front End",
+      title2: "Developer",
+      title3: "UX/UI Designer",
+      location: "Based in Chihuahua, Mexico",
+      viewWork: "View My Work →",
+      resume: "Resume",
+      resumeFile: "./AnaEstrada_Resume.pdf",
+      resumeFileName: "AnaEstrada_Resume.pdf",
+    },
+
+    about: {
+      heading2: "ABOUT ME",
+      eyebrow: "Hi there",
+      rotatedLabel: "Ana Paola Estrada · Frontend & UX/UI",
+      paragraphs: [
+        "My name is Ana, a frontend developer and UX/UI designer from Chihuahua, Mexico. I love learning new things — I'm a really curious person",
+        "I learned sports photography by practicing, making mistakes, and getting better. I learned to knit and I love making amigurumis. I applied for a scholarship to go to South Korea, got it, packed my bags, and spent a semester studying Data Science at Sungkyunkwan University — in a country where I didn't speak the language.",
+        "That's how I approach everything. If something catches my attention, I learn it. That same energy goes into my work: I design and build interfaces that feel natural to use, and I don't stop until they do.",
+      ],
+      tags: [
+        "Sports photography 📷",
+        "Knitting 🧶",
+        "Enmoladas 🫔",
+        "Data Science",
+        "Seoul 🇰🇷",
+        "Soccer ⚽",
+      ],
+      currentlyLabel: "Currently →",
+      currently: "Interning at Mentory Grupo Consultor, building React interfaces and finishing my CS degree at Tec de Monterrey.",
+      miniList: [
+        "Frontend Dev & UX/UI Designer",
+        "Tec de Monterrey · graduating 2026",
+        "GKS Scholar · Sungkyunkwan Univ.",
+        "Student Federation President",
+        "Women's Soccer Team Scholarship",
+      ],
+    },
+
+    projects: {
+      heading2: "PROJECTS",
+      cta_github: "View Code",
+      cta_figma: "View Design",
+      items: [
+        {
+          index: "01",
+          type: "dev",
+          title: "Retirement Plan Website",
+          subtitle: "Financial Advisor · React.js",
+          description:
+            "Responsive web app built with React.js and a Mobile-First approach. Integrated third-party APIs (Google Sheets, Calendly) to automate client data and appointment scheduling.",
+          tags: ["React.js", "Calendly API", "Google Sheets", "Mobile-First"],
+          github: "https://github.com/AnaEstrada-05",
+          figma: null,
+          gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #533483 100%)",
+          accentColor: "#a78bfa",
+        },
+        {
+          index: "02",
+          type: "dev",
+          title: "Task Management Platform",
+          subtitle: "AutoZone · Svelte + Figma",
+          description:
+            "End-to-end project: designed full UX/UI in Figma — wireframes, user flows, visual system — then developed the frontend with Svelte and Git under SCRUM methodology.",
+          tags: ["Svelte", "Figma", "SCRUM", "Git", "UI/UX Design"],
+          github: "https://github.com/AnaEstrada-05",
+          figma: "https://figma.com",
+          gradient: "linear-gradient(135deg, #0d1117 0%, #1a2744 40%, #0e4429 70%, #1a7f37 100%)",
+          accentColor: "#4ade80",
+        },
+        {
+          index: "03",
+          type: "dev",
+          title: "Hobi",
+          subtitle: "Personal project · React Native",
+          description:
+            "Smart wallet app that detects your location, identifies the business category, and recommends which credit card to use to maximize cashback. Features geofencing, a benefits matrix, and a post-purchase feedback loop to continuously improve card suggestions.",
+          tags: ["React Native", "Google Maps API", "Geofencing", "UX/UI", "Figma"],
+          github: "https://github.com/AnaEstrada-05",
+          figma: "https://www.figma.com/design/TMpD9EbZXUvyrJcJ0IxqXM/Hobi?node-id=1-2&t=16cpTc1kVxg4DcYO-1",
+          gradient: "linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 40%, #2d1b69 70%, #4c1d95 100%)",
+          accentColor: "#f59e0b",
+        },
+        {
+          index: "04",
+          type: "design",
+          title: "BookIt",
+          subtitle: "UX/UI Design · Figma",
+          description:
+            "Full UX/UI design for a booking platform. Covers user research, wireframes, interactive prototype, and a complete design system including components, colors, and typography.",
+          tags: ["Figma", "Wireframes", "Prototype", "Design System"],
+          github: null,
+          figma: "https://www.figma.com/design/chH4lRYSROu4KE4Vsk9UR7/BookIt?node-id=0-1&t=9JWRXA743WwCUufo-1",
+          gradient: "linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)",
+          accentColor: "#818cf8",
+        },
+        {
+          index: "05",
+          type: "design",
+          title: "Mujeres por México Chihuahua",
+          subtitle: "UX/UI Design · Figma",
+          description:
+            "Interface design for a non-profit organization in Chihuahua. Focused on accessibility, clear information hierarchy, and a warm visual identity that reflects the organization's mission.",
+          tags: ["Figma", "Non-profit", "Accessibility", "Visual Identity"],
+          github: null,
+          figma: "https://www.figma.com/design/h9ei39B1Fyh3wEuOIUU786/Mujeres-por-M%C3%A9xico-Chihuahua?node-id=0-1&t=gWvde99GBbPjUObB-1",
+          gradient: "linear-gradient(135deg, #1a0505 0%, #450a0a 40%, #7f1d1d 70%, #991b1b 100%)",
+          accentColor: "#fca5a5",
+        },
+        {
+          index: "06",
+          type: "design",
+          title: "Emprendemos AC",
+          subtitle: "UX/UI Design · Figma",
+          description:
+            "Complete UI design for an entrepreneurship NGO. Designed landing pages, dashboards, and onboarding flows with a focus on simplicity and motivating the user to take action.",
+          tags: ["Figma", "NGO", "Landing Page", "Onboarding"],
+          github: null,
+          figma: "https://www.figma.com/design/uA3b1N6hu0ENoxq2wV3tlK/Emprendemos-AC?node-id=0-1&t=hNifNJNVjd7WopzL-1",
+          gradient: "linear-gradient(135deg, #052e16 0%, #14532d 40%, #15803d 70%, #16a34a 100%)",
+          accentColor: "#86efac",
+        },
+      ],
+    },
+
+    skills: {
+      heading1: "SKILLS &",
+      heading2: "EXPERTISE",
+      categories: [
+        {
+          id: "programmingLanguages",
+          title: "Programming Languages",
+          color: "#60a5fa",
+          skills: [
+            { name: "JavaScript", level: "Advanced", color: "#facc15" },
+            { name: "TypeScript", level: "Intermediate", color: "#3b82f6" },
+            { name: "Python", level: "Intermediate", color: "#22c55e" },
+            { name: "C++", level: "Intermediate", color: "#a855f7" },
+            { name: "SQL", level: "Intermediate", color: "#f97316" },
+          ],
+        },
+        {
+          id: "devTools",
+          title: "Dev Tools & Tech",
+          color: "#f472b6",
+          skills: [
+            { name: "React.js", level: "Advanced", color: "#61dafb" },
+            { name: "Node.js", level: "Intermediate", color: "#22c55e" },
+            { name: "Svelte", level: "Intermediate", color: "#ff3e00" },
+            { name: "Tailwind", level: "Advanced", color: "#06b6d4" },
+            { name: "Git", level: "Advanced", color: "#ef4444" },
+            { name: "MySQL", level: "Intermediate", color: "#3b82f6" },
+            { name: "Figma", level: "Advanced", color: "#a855f7" },
+          ],
+        },
+        {
+          id: "softSkills",
+          title: "Soft Skills",
+          color: "#fb923c",
+          skills: [
+            { name: "Communication", color: "#6366f1" },
+            { name: "Problem Solving", color: "#f97316" },
+            { name: "Teamwork", color: "#ef4444" },
+            { name: "Leadership", color: "#facc15" },
+          ],
+        },
+        {
+          id: "languages",
+          title: "Languages",
+          color: "#4ade80",
+          skills: [
+            { name: "Spanish", level: "Native", color: "#ef4444" },
+            { name: "English", level: "C1 – Fluent", color: "#3b82f6" },
+          ],
+        },
+      ],
+    },
+  },
+
+  /* ════════════════════════════════════════════
+     ESPAÑOL
+  ════════════════════════════════════════════ */
+  es: {
+    nav: {
+      home: "Inicio",
+      about: "Sobre mí",
+      projects: "Proyectos",
+      skills: "Habilidades",
+      contact: "Contáctame →",
+    },
+    hero: {
+      available: "Disponible para nuevas oportunidades",
+      greeting: "¡Hola! Soy Ana y soy",
+      title1: "Front End",
+      title2: "Developer",
+      title3: "UX / UI Designer",
+      location: "Chihuahua, México",
+      viewWork: "Ver mis proyectos →",
+      resume: "CV",
+      resumeFile: "./AnaEstrada_CV.pdf",
+      resumeFileName: "AnaEstrada_CV.pdf"
+    },
+
+    about: {
+      heading2: "SOBRE MÍ",
+      eyebrow: "Hola",
+      rotatedLabel: "Ana Paola Estrada · Frontend & UX/UI Desginer",
+      paragraphs: [
+        "Mi nombre es Ana, frontend developer y UX/UI designer de Chihuahua, México. Me encanta amprender cosas nuevas, soy una persona muy curiosa.",
+        "Aprendí fotografía deportiva practicando, equivocandome y mejorando. Aprendí a tejer y me encanta hacer amigurumis. Apliqué a una beca para irme a Corea del Sur, me la dieron, hice la maleta y pasé un semestre estudiando Ciencia de Datos en Sungkyunkwan University — en un país donde no hablaba el idioma.",
+        "Así me acerco a todo. Si algo me llama la atención, lo aprendo. Esa misma energía la pongo en mi trabajo: diseño y construyo interfaces que se sienten naturales de usar, y no paro hasta que lo son.",
+      ],
+      tags: [
+        "Fotografía deportiva 📷",
+        "Tejer 🧶",
+        "Enmoladas 🫔",
+        "Ciencia de datos",
+        "Seúl 🇰🇷",
+        "Fútbol ⚽",
+      ],
+      currentlyLabel: "Actualmente →",
+      currently: "Practicante en Mentory Grupo Consultor, construyendo interfaces en React y terminando mi carrera en Tec de Monterrey.",
+      miniList: [
+        "Frontend Dev & UX/UI Designer",
+        "Tec de Monterrey · graduación 2026",
+        "Beca GKS · Sungkyunkwan Univ.",
+        "Presidenta de Federación de Estudiantes",
+        "Becada del Equipo de Fútbol Femenil",
+      ],
+    },
+
+    projects: {
+      heading2: "PROYECTOS",
+      cta_github: "Ver Código",
+      cta_figma: "Ver Diseño",
+      items: [
+        {
+          index: "01",
+          type: "dev",
+          title: "Sitio de Planes de Retiro",
+          subtitle: "Asesor Financiero · React.js",
+          description:
+            "Aplicación responsiva con React.js enfocada en diseño Mobile-First. Integré APIs de terceros (Google Sheets, Calendly) para automatizar datos de clientes y agendar citas.",
+          tags: ["React.js", "Calendly API", "Google Sheets", "Mobile-First"],
+          github: "https://github.com/AnaEstrada-05",
+          figma: null,
+          gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #533483 100%)",
+          accentColor: "#a78bfa",
+        },
+        {
+          index: "02",
+          type: "dev",
+          title: "Plataforma de Gestión de Tareas",
+          subtitle: "AutoZone · Svelte + Figma",
+          description:
+            "Proyecto completo: diseñé toda la UX/UI en Figma — wireframes, flujos de usuario, sistema visual — y desarrollé el frontend con Svelte y Git bajo metodología SCRUM.",
+          tags: ["Svelte", "Figma", "SCRUM", "Git", "UI/UX Design"],
+          github: "https://github.com/AnaEstrada-05",
+          figma: "https://figma.com",
+          gradient: "linear-gradient(135deg, #0d1117 0%, #1a2744 40%, #0e4429 70%, #1a7f37 100%)",
+          accentColor: "#4ade80",
+        },
+        {
+          index: "03",
+          type: "dev",
+          title: "Hobi",
+          subtitle: "Proyecto personal · React Native",
+          description:
+            "App que detecta tu ubicación, identifica el tipo de negocio y te recomienda qué tarjeta usar para maximizar tu cashback. Incluye geofencing, matriz de beneficios y un loop de feedback post-compra para mejorar las sugerencias con el tiempo.",
+          tags: ["React Native", "Google Maps API", "Geofencing", "UX/UI", "Figma"],
+          github: "https://github.com/AnaEstrada-05",
+          figma: null,
+          gradient: "linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 40%, #2d1b69 70%, #4c1d95 100%)",
+          accentColor: "#f59e0b",
+        },
+        {
+          index: "04",
+          type: "design",
+          title: "BookIt",
+          subtitle: "UX/UI Design · Figma",
+          description:
+            "Diseño completo UX/UI para una plataforma de reservas. Incluye investigación de usuario, wireframes, prototipo interactivo y sistema de diseño con componentes, colores y tipografía.",
+          tags: ["Figma", "Wireframes", "Prototipo", "Sistema de diseño"],
+          github: null,
+          figma: "https://www.figma.com/design/chH4lRYSROu4KE4Vsk9UR7/BookIt?node-id=0-1",
+          gradient: "linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)",
+          accentColor: "#818cf8",
+        },
+        {
+          index: "05",
+          type: "design",
+          title: "Mujeres por México Chihuahua",
+          subtitle: "UX/UI Design · Figma",
+          description:
+            "Diseño de interfaz para una organización sin fines de lucro en Chihuahua. Enfocado en accesibilidad, jerarquía de información clara e identidad visual cálida que refleja la misión de la organización.",
+          tags: ["Figma", "ONG", "Accesibilidad", "Identidad visual"],
+          github: null,
+          figma: "https://www.figma.com/design/h9ei39B1Fyh3wEuOIUU786/Mujeres-por-M%C3%A9xico-Chihuahua?node-id=0-1",
+          gradient: "linear-gradient(135deg, #1a0505 0%, #450a0a 40%, #7f1d1d 70%, #991b1b 100%)",
+          accentColor: "#fca5a5",
+        },
+        {
+          index: "06",
+          type: "design",
+          title: "Emprendemos AC",
+          subtitle: "UX/UI Design · Figma",
+          description:
+            "Diseño completo de UI para una ONG de emprendimiento. Incluye landing pages, dashboards y flujos de onboarding enfocados en simplicidad y motivar al usuario a tomar acción.",
+          tags: ["Figma", "ONG", "Landing Page", "Onboarding"],
+          github: null,
+          figma: "https://www.figma.com/design/uA3b1N6hu0ENoxq2wV3tlK/Emprendemos-AC?node-id=0-1",
+          gradient: "linear-gradient(135deg, #052e16 0%, #14532d 40%, #15803d 70%, #16a34a 100%)",
+          accentColor: "#86efac",
+        },
+      ],
+    },
+
+    skills: {
+      heading1: "HABILIDADES &",
+      heading2: "EXPERTISE",
+      categories: [
+        {
+          id: "programmingLanguages",
+          title: "Lenguajes",
+          color: "#60a5fa",
+          skills: [
+            { name: "JavaScript", level: "Avanzado", color: "#facc15" },
+            { name: "TypeScript", level: "Intermedio", color: "#3b82f6" },
+            { name: "Python", level: "Intermedio", color: "#22c55e" },
+            { name: "C++", level: "Intermedio", color: "#a855f7" },
+            { name: "SQL", level: "Intermedio", color: "#f97316" },
+          ],
+        },
+        {
+          id: "devTools",
+          title: "Herramientas",
+          color: "#f472b6",
+          skills: [
+            { name: "React.js", level: "Avanzado", color: "#61dafb" },
+            { name: "Node.js", level: "Intermedio", color: "#22c55e" },
+            { name: "Svelte", level: "Intermedio", color: "#ff3e00" },
+            { name: "Tailwind", level: "Avanzado", color: "#06b6d4" },
+            { name: "Git", level: "Avanzado", color: "#ef4444" },
+            { name: "MySQL", level: "Intermedio", color: "#3b82f6" },
+            { name: "Figma", level: "Avanzado", color: "#a855f7" },
+          ],
+        },
+        {
+          id: "softSkills",
+          title: "Habilidades Blandas",
+          color: "#fb923c",
+          skills: [
+            { name: "Comunicación", color: "#6366f1" },
+            { name: "Resolución de problemas", color: "#f97316" },
+            { name: "Trabajo en equipo", color: "#ef4444" },
+            { name: "Liderazgo", color: "#facc15" },
+          ],
+        },
+        {
+          id: "languages",
+          title: "Idiomas",
+          color: "#4ade80",
+          skills: [
+            { name: "Español", level: "Nativo", color: "#ef4444" },
+            { name: "Inglés", level: "C1 – Avanzado", color: "#3b82f6" },
+          ],
+        },
+      ],
+    },
+  },
+};

@@ -1,35 +1,41 @@
 @import url("../../components/fonts.css");
 
-.hero{
+.hero {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .hero_content {
-    min-height: 100vh;
-    padding: 3rem 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: fit-content;
-    will-change: transform, opacity;
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  will-change: transform, opacity;
 }
 
 .hero_content > * {
-  max-width: 1200px;
   width: 100%;
 }
 
 .intro {
   text-align: left;
-  margin-left: 4rem;
+  margin-left: clamp(1rem, 4vw, 4rem);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 100;
+  color: #000;
 }
 
 .description {
   text-align: right;
-  margin-right: 4rem;
+  margin-right: clamp(1rem, 4vw, 4rem);
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+  font-weight: 100;
+  color: #000;
 }
 
 .availabilityBadge {
@@ -43,12 +49,8 @@
   font-weight: 600;
   letter-spacing: 0.02em;
   color: #0f172a;
-  background: linear-gradient(
-    135deg,
-    rgba(16, 185, 129, 0.15),
-    rgba(59, 130, 246, 0.15)
-  );
-  border: 1px solid rgba(16, 185, 129, 0.45);
+  background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(59,130,246,0.15));
+  border: 1px solid rgba(16,185,129,0.45);
   backdrop-filter: blur(6px);
   animation: pulseGlow 2.5s infinite;
   width: fit-content;
@@ -62,27 +64,10 @@
   box-shadow: 0 0 8px #10b981;
 }
 
-.availabilityBadge:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
-}
-
 @keyframes pulseGlow {
-  0% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
-  }
-  70% {
-    box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-  }
-}
-
-.hero_content h3 {
-  font-size: 1.3rem;
-  font-weight: 100;
-  color: #000000;
+  0%   { box-shadow: 0 0 0 0 rgba(16,185,129,0.6); }
+  70%  { box-shadow: 0 0 0 12px rgba(16,185,129,0); }
+  100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); }
 }
 
 .heroTitle {
@@ -94,28 +79,54 @@
   text-rendering: optimizeLegibility;
 }
 
-.socialMedia a,
-.contactButton, .resumeButton {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-}
-
 .heroTitle h1 {
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-weight: 900;
-  font-size: clamp(4rem, 14vw, 12rem);
+  font-size: clamp(3.5rem, 10vw, 10rem);
   letter-spacing: -0.05em;
   margin: 0;
 }
 
-#frontend { 
-  color: #000; 
-  margin-bottom: -3rem;
-  margin-top: -2rem;
-} 
+#frontend {
+  color: #000;
+  margin-bottom: -2rem;
+  margin-top: -1rem;
+}
 
-#developer { 
+#developer {
   color: white;
   text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
+}
+
+#designer {
+  color: #0000009c;
+  -webkit-text-stroke: 2px #000;
+  scale: 0.8;
+}
+
+.heroTitleDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: -0.5rem 0;
+  width: 100%;
+}
+
+.dividerLine {
+  flex: 1;
+  max-width: 18rem;
+  height: 2px;
+  background: #272e36;
+}
+
+.dividerAmp {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #272e36;
+  letter-spacing: -0.02em;
+  line-height: 1;
 }
 
 .socialMedia {
@@ -123,6 +134,7 @@
   gap: 1.2rem;
   margin-top: 1rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .socialMedia a {
@@ -142,17 +154,13 @@
   color: white;
 }
 
-.contactButton:hover, .resumeButton:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
 .heroButtons {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .contactButton,
@@ -161,26 +169,52 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-
-  height: 48px;   /* fuerza misma altura */
+  height: 48px;
   padding: 0 2rem;
-
   border-radius: 0.6rem;
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
   text-decoration: none;
-
-  transition: all 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
+.contactButton:hover,
+.resumeButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 
 @media (max-width: 768px) {
-  .heroTitle h1 {
-    font-size: clamp(3rem, 18vw, 6rem);
+  .hero_content {
+    padding: 2rem 1.25rem;
+    gap: 0.75rem;
   }
 
+  .intro,
   .description {
+    margin-left: 0;
+    margin-right: 0;
     font-size: 0.95rem;
   }
+
+  .description { text-align: left; }
+
+  #frontend  { margin-bottom: -1rem; margin-top: 0; }
+  #designer  { -webkit-text-stroke: 1.5px #000; }
+
+  .dividerLine { max-width: 5rem; }
+  .dividerAmp  { font-size: clamp(1rem, 5vw, 1.6rem); }
+
+  .heroButtons { flex-direction: column; width: 100%; }
+
+  .contactButton,
+  .resumeButton {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 400px) {
+  .heroTitle h1 { font-size: clamp(2.8rem, 14vw, 4rem); }
 }

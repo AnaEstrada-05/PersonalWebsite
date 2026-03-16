@@ -1,0 +1,11 @@
+.licenseContainer h1 {
+    font-family: var(--font-heading);
+    text-align: left;
+    margin: 0;
+}
+
+.title {
+    font-size: 2rem;
+    width: fit-content;
+    color: black;
+}

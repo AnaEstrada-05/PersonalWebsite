@@ -1,19 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { useLang } from "../../context/LanguageContext";
+import { t } from "../../i18n/translations";
 import "./hero.css";
-
-import {
-  fadeUp,
-  fadeLeft,
-  fadeRight,
-  containerStagger
-} from "../../animations/animations";
+import { fadeUp, fadeLeft, fadeRight, containerStagger } from "../../animations/animations";
 
 const Hero = () => {
+  const { lang } = useLang();
+  const tr = t[lang].hero;
+
   return (
-    <div className="hero">
+    <div className="hero" id="home">
       <motion.section
         className="hero_content"
         variants={containerStagger}
@@ -21,45 +21,39 @@ const Hero = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-
-        <motion.div
-          className="availabilityBadge"
-          variants={fadeUp}
-          whileHover={{ scale: 1.05 }}
-        >
+        <motion.div className="availabilityBadge" variants={fadeUp} whileHover={{ scale: 1.05 }}>
           <span className="dot" />
-          Available for new opportunities
+          {tr.available}
         </motion.div>
 
         <motion.h3 className="intro" variants={fadeLeft}>
-          Hello! My name is Ana and I'm a
+          {tr.greeting}
         </motion.h3>
 
         <div className="heroTitle">
-          <motion.h1 id="frontend" variants={fadeUp}>
-            Front End
-          </motion.h1>
-
-          <motion.h1 id="developer" variants={fadeUp}>
-            Developer
-          </motion.h1>
+          <motion.h1 id="frontend" variants={fadeUp}>{tr.title1}</motion.h1>
+          <motion.h1 id="developer" variants={fadeUp}>{tr.title2}</motion.h1>
+          <motion.div className="heroTitleDivider" variants={fadeUp}>
+            <span className="dividerLine" />
+            <span className="dividerAmp">&amp;</span>
+            <span className="dividerLine" />
+          </motion.div>
+          <motion.h1 id="designer" variants={fadeUp}>{tr.title3}</motion.h1>
         </div>
 
         <motion.h3 className="description" variants={fadeRight}>
-          Based in Chihuahua, Mexico
+          {tr.location}
         </motion.h3>
 
         <motion.div className="socialMedia" variants={fadeUp}>
-          {[FaGithub, FaLinkedin, Mail].map((Icon, index) => (
+          {[
+            { Icon: FaGithub,   href: "https://github.com/AnaEstrada-05" },
+            { Icon: FaLinkedin, href: "https://www.linkedin.com/in/ana-estrada-84085a29b/" },
+            { Icon: MdEmail,    href: "mailto:anaestrgz@gmail.com" },
+          ].map(({ Icon, href }, index) => (
             <motion.a
               key={index}
-              href={
-                index === 0
-                  ? "https://github.com/AnaEstrada-05"
-                  : index === 1
-                  ? "https://www.linkedin.com/in/ana-estrada-84085a29b/"
-                  : "mailto:anaestrgz@gmail.com"
-              }
+              href={href}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.15, rotate: 2 }}
@@ -75,22 +69,22 @@ const Hero = () => {
             className="contactButton"
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
           >
-            View My Work →
+            {tr.viewWork}
           </motion.button>
 
           <motion.a
-            href="/Resume_AnaEstrada.pdf"
-            download="Ana_Estrada_CV.pdf"
+            href={tr.resumeFile}
+            download={tr.resumeFileName}
             className="resumeButton"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <Download size={18} />
-            Resume
+            {tr.resume}
           </motion.a>
         </motion.div>
-
       </motion.section>
     </div>
   );
