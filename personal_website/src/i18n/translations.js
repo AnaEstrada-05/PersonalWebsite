@@ -327,8 +327,8 @@ export const t = {
     },
 
     skills: {
-      heading1: "HABILIDADES &",
-      heading2: "EXPERTISE",
+      heading1: "MIS",
+      heading2: "HABILIDADES",
       categories: [
         {
           id: "programmingLanguages",
