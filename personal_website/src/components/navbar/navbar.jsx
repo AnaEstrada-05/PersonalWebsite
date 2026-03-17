@@ -60,9 +60,9 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className="navbarRight">
-        <button className="navbarButton">{tr.contact}</button>
-      </div>
+      <button className="navbarButton" onClick={() => window.location.href = 'mailto:anaestrgz@gmail.com'} > 
+        {tr.contact} 
+      </button>
 
       <div className={`mobileMenu ${menuOpen ? 'open' : ''}`}>
         <ul>
