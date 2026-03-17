@@ -61,7 +61,7 @@ export const t = {
           description:
             "Responsive web app built with React.js and a Mobile-First approach. Integrated third-party APIs (Google Sheets, Calendly) to automate client data and appointment scheduling.",
           tags: ["React.js", "Calendly API", "Google Sheets", "Mobile-First"],
-          github: "https://github.com/AnaEstrada-05",
+          github: "https://github.com/AnaEstrada-05/pagina-plan-retiro.git",
           figma: null,
           gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #533483 100%)",
           accentColor: "#a78bfa",
@@ -74,8 +74,8 @@ export const t = {
           description:
             "End-to-end project: designed full UX/UI in Figma — wireframes, user flows, visual system — then developed the frontend with Svelte and Git under SCRUM methodology.",
           tags: ["Svelte", "Figma", "SCRUM", "Git", "UI/UX Design"],
-          github: "https://github.com/AnaEstrada-05",
-          figma: "https://figma.com",
+          github: "https://github.com/CustomerAutoZoneSelfService",
+          figma: "https://www.figma.com/design/iVStNcoq2N6yBRxWj84CU4/CAZSS?node-id=0-1&p=f&t=oywAi7omPDQS9c3t-0",
           gradient: "linear-gradient(135deg, #0d1117 0%, #1a2744 40%, #0e4429 70%, #1a7f37 100%)",
           accentColor: "#4ade80",
         },
@@ -87,7 +87,7 @@ export const t = {
           description:
             "Smart wallet app that detects your location, identifies the business category, and recommends which credit card to use to maximize cashback. Features geofencing, a benefits matrix, and a post-purchase feedback loop to continuously improve card suggestions.",
           tags: ["React Native", "Google Maps API", "Geofencing", "UX/UI", "Figma"],
-          github: "https://github.com/AnaEstrada-05",
+          github: "https://github.com/AnaEstrada-05/hobi_frontend.git",
           figma: "https://www.figma.com/design/TMpD9EbZXUvyrJcJ0IxqXM/Hobi?node-id=1-2&t=16cpTc1kVxg4DcYO-1",
           gradient: "linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 40%, #2d1b69 70%, #4c1d95 100%)",
           accentColor: "#f59e0b",
@@ -253,7 +253,7 @@ export const t = {
           description:
             "Aplicación responsiva con React.js enfocada en diseño Mobile-First. Integré APIs de terceros (Google Sheets, Calendly) para automatizar datos de clientes y agendar citas.",
           tags: ["React.js", "Calendly API", "Google Sheets", "Mobile-First"],
-          github: "https://github.com/AnaEstrada-05",
+          github: "https://github.com/AnaEstrada-05/pagina-plan-retiro.git",
           figma: null,
           gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #533483 100%)",
           accentColor: "#a78bfa",
@@ -266,8 +266,8 @@ export const t = {
           description:
             "Proyecto completo: diseñé toda la UX/UI en Figma — wireframes, flujos de usuario, sistema visual — y desarrollé el frontend con Svelte y Git bajo metodología SCRUM.",
           tags: ["Svelte", "Figma", "SCRUM", "Git", "UI/UX Design"],
-          github: "https://github.com/AnaEstrada-05",
-          figma: "https://figma.com",
+          github: "https://github.com/CustomerAutoZoneSelfService",
+          figma: "https://www.figma.com/design/iVStNcoq2N6yBRxWj84CU4/CAZSS?node-id=0-1&p=f&t=oywAi7omPDQS9c3t-0",
           gradient: "linear-gradient(135deg, #0d1117 0%, #1a2744 40%, #0e4429 70%, #1a7f37 100%)",
           accentColor: "#4ade80",
         },
@@ -279,8 +279,8 @@ export const t = {
           description:
             "App que detecta tu ubicación, identifica el tipo de negocio y te recomienda qué tarjeta usar para maximizar tu cashback. Incluye geofencing, matriz de beneficios y un loop de feedback post-compra para mejorar las sugerencias con el tiempo.",
           tags: ["React Native", "Google Maps API", "Geofencing", "UX/UI", "Figma"],
-          github: "https://github.com/AnaEstrada-05",
-          figma: null,
+          github: "https://github.com/AnaEstrada-05/hobi_frontend.git",
+          figma: "https://www.figma.com/design/TMpD9EbZXUvyrJcJ0IxqXM/Hobi?node-id=1-2&p=f&t=Kpni1HG7Q6DCy1mC-0",
           gradient: "linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 40%, #2d1b69 70%, #4c1d95 100%)",
           accentColor: "#f59e0b",
         },
