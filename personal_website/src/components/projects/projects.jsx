@@ -140,7 +140,7 @@ const FeaturedCard = ({ project, cta_github, cta_figma, cta_live, index }) => {
 };
 
 // ── Small design card (UX/UI projects grid) ───────────────
-const DesignCard = ({ project, cta_figma, cardIndex }) => {
+const DesignCard = ({ project, cta_figma, cta_live, cardIndex }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.15 });
   const image = projectImages[project.index];
@@ -174,6 +174,12 @@ const DesignCard = ({ project, cta_figma, cardIndex }) => {
               <a href={project.figma} target="_blank" rel="noopener noreferrer"
                 className="projectLink" style={{ "--accent": project.accentColor }}>
                 <FaFigma size={18} /><span>{cta_figma}</span>
+              </a>
+            )}
+            {project.live && (
+              <a href={project.live} target="_blank" rel="noopener noreferrer"
+                className="projectLink" style={{ "--accent": project.accentColor }}>
+                <FaExternalLinkAlt size={16} /><span>{cta_live}</span>
               </a>
             )}
           </div>
@@ -304,6 +310,7 @@ const Projects = () => {
                   key={project.index}
                   project={project}
                   cta_figma={tr.cta_figma}
+                  cta_live={tr.cta_live}
                   cardIndex={i}
                 />
               ))}
