@@ -38,7 +38,7 @@ export const t = {
         "Soccer",
       ],
       currentlyLabel: "Currently →",
-      currently: "Product & UX/UI Designer at Hobi, designing and building the interface for a fintech app, after finishing my CS degree at Tec de Monterrey.",
+      currently: "COO at Kinalia, an AI consulting studio I co-founded with friends, currently building Rope Master — an offline event management system for roping competitions — after finishing my CS degree at Tec de Monterrey.",
       miniList: [
         "Frontend Dev & UX/UI Designer",
         "Tec de Monterrey · graduating 2026",
@@ -243,7 +243,7 @@ export const t = {
         "Fútbol",
       ],
       currentlyLabel: "Actualmente →",
-      currently: "Product & UX/UI Designer en Hobi, diseñando y construyendo la interfaz de una app fintech, después de terminar mi carrera en Tec de Monterrey.",
+      currently: "COO en Kinalia, un estudio de consultoría de IA que cofundé con amigos, construyendo actualmente Rope Master — un sistema de gestión de eventos de lazo que funciona sin internet — después de terminar mi carrera en Tec de Monterrey.",
       miniList: [
         "Frontend Dev & UX/UI Designer",
         "Tec de Monterrey · graduación 2026",
