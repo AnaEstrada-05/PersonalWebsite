@@ -15,6 +15,7 @@ import imgMujeres    from "../../assets/PaginaMujeres.png";
 import imgEmprendemos from "../../assets/PaginaEmprendemos.png";
 import imgHemara from "../../assets/Hemara.png";
 import imgKinalia from "../../assets/Kinalia.png";
+import imgRopeMaster from "../../assets/RopeMaster.png";
 
 const projectImages = {
   "01": imgRetiro,
@@ -25,13 +26,15 @@ const projectImages = {
   "06": imgEmprendemos,
   "07": imgHemara,
   "08": imgKinalia,
+  "09": imgRopeMaster,
 };
 
-// Some screenshots are wider than the 4:3 card ratio, so the default
-// center crop cuts off important content (e.g. logo/headline) on both
-// sides. Override object-position per project index when needed.
-const projectImagePosition = {
-  "08": "left top",
+// Some screenshots are much wider than the 4:3 card ratio, so a plain
+// center/edge crop cuts off important content (logo, nav, headline).
+// For those, show the full screenshot un-cropped (object-fit: contain)
+// on a matching background instead of cropping it.
+const projectImageContain = {
+  "08": "#0a0e1a",
 };
 
 // ── Placeholder shapes per project index ──────────────────
@@ -77,14 +80,14 @@ const FeaturedCard = ({ project, cta_github, cta_figma, cta_live, index }) => {
     >
       <div
         className="projectVisual"
-        style={{ background: image ? "#000" : project.gradient }}
+        style={{ background: image ? (projectImageContain[project.index] || "#000") : project.gradient }}
       >
         {image ? (
           <img
             src={image}
             alt={project.title}
             className="projectScreenshot"
-            style={projectImagePosition[project.index] ? { objectPosition: projectImagePosition[project.index] } : undefined}
+            style={projectImageContain[project.index] ? { objectFit: "contain" } : undefined}
           />
         ) : (
           <>
