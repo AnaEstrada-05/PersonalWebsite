@@ -27,6 +27,13 @@ const projectImages = {
   "08": imgKinalia,
 };
 
+// Some screenshots are wider than the 4:3 card ratio, so the default
+// center crop cuts off important content (e.g. logo/headline) on both
+// sides. Override object-position per project index when needed.
+const projectImagePosition = {
+  "08": "left top",
+};
+
 // ── Placeholder shapes per project index ──────────────────
 const PlaceholderShapes = ({ index, accentColor }) => (
   <div className="projectShapes">
@@ -73,7 +80,12 @@ const FeaturedCard = ({ project, cta_github, cta_figma, cta_live, index }) => {
         style={{ background: image ? "#000" : project.gradient }}
       >
         {image ? (
-          <img src={image} alt={project.title} className="projectScreenshot" />
+          <img
+            src={image}
+            alt={project.title}
+            className="projectScreenshot"
+            style={projectImagePosition[project.index] ? { objectPosition: projectImagePosition[project.index] } : undefined}
+          />
         ) : (
           <>
             <div className="projectNoise" />
