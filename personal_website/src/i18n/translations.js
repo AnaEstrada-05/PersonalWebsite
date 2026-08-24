@@ -52,6 +52,7 @@ export const t = {
       heading2: "PROJECTS",
       cta_github: "View Code",
       cta_figma: "View Design",
+      cta_live: "Visit Site",
       items: [
         {
           index: "01",
@@ -143,6 +144,20 @@ export const t = {
           figma: "https://www.figma.com/design/wTX0pLioYxx9IzNXNMAXLh/Untitled?node-id=8-3&p=f&t=p4WuowasSpFMYrto-0",
           gradient: "linear-gradient(135deg, #1c1611 0%, #3d2f1f 40%, #6b4f2e 70%, #a67c3d 100%)",
           accentColor: "#d4af37",
+        },
+        {
+          index: "08",
+          type: "dev",
+          title: "Kinalia",
+          subtitle: "AI Consulting Studio · Next.js + Tailwind",
+          description:
+            "Product & UX/UI design for Kinalia, an AI consulting studio I co-founded with friends — including the marketing site and the product page for Rope Master, our first product: an offline-first event management system for roping competitions.",
+          tags: ["Next.js", "React", "Tailwind CSS", "UI/UX Design", "Product Design"],
+          github: "https://github.com/AnaEstrada-05/Kinalia.git",
+          figma: null,
+          live: "https://kinalia.com.mx/",
+          gradient: "linear-gradient(135deg, #0a0e1a 0%, #16213e 40%, #1e3a5f 70%, #2c5f8a 100%)",
+          accentColor: "#38bdf8",
         },
       ],
     },
@@ -257,6 +272,7 @@ export const t = {
       heading2: "PROYECTOS",
       cta_github: "Ver Código",
       cta_figma: "Ver Diseño",
+      cta_live: "Ver Sitio",
       items: [
         {
           index: "01",
@@ -348,6 +364,20 @@ export const t = {
           figma: "https://www.figma.com/design/wTX0pLioYxx9IzNXNMAXLh/Untitled?node-id=8-3&p=f&t=p4WuowasSpFMYrto-0",
           gradient: "linear-gradient(135deg, #1c1611 0%, #3d2f1f 40%, #6b4f2e 70%, #a67c3d 100%)",
           accentColor: "#d4af37",
+        },
+        {
+          index: "08",
+          type: "dev",
+          title: "Kinalia",
+          subtitle: "Consultoría de IA · Next.js + Tailwind",
+          description:
+            "Diseño de producto y UX/UI para Kinalia, un estudio de consultoría de IA que cofundé con amigos — incluye el sitio principal y la página del producto Rope Master, nuestro primer producto: un sistema de gestión de eventos de lazo que funciona sin internet.",
+          tags: ["Next.js", "React", "Tailwind CSS", "UI/UX Design", "Diseño de producto"],
+          github: "https://github.com/AnaEstrada-05/Kinalia.git",
+          figma: null,
+          live: "https://kinalia.com.mx/",
+          gradient: "linear-gradient(135deg, #0a0e1a 0%, #16213e 40%, #1e3a5f 70%, #2c5f8a 100%)",
+          accentColor: "#38bdf8",
         },
       ],
     },

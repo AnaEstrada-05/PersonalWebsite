@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { FaGithub, FaFigma } from "react-icons/fa";
+import { FaGithub, FaFigma, FaExternalLinkAlt } from "react-icons/fa";
 import { useLang } from "../../context/LanguageContext";
 import { t } from "../../i18n/translations";
 import "./projects.css";
@@ -53,7 +53,7 @@ const PlaceholderShapes = ({ index, accentColor }) => (
 );
 
 // ── Big featured card (dev projects) ──────────────────────
-const FeaturedCard = ({ project, cta_github, cta_figma, index }) => {
+const FeaturedCard = ({ project, cta_github, cta_figma, cta_live, index }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   const image = projectImages[project.index];
@@ -93,6 +93,12 @@ const FeaturedCard = ({ project, cta_github, cta_figma, index }) => {
               <a href={project.figma} target="_blank" rel="noopener noreferrer"
                 className="projectLink" style={{ "--accent": project.accentColor }}>
                 <FaFigma size={18} /><span>{cta_figma}</span>
+              </a>
+            )}
+            {project.live && (
+              <a href={project.live} target="_blank" rel="noopener noreferrer"
+                className="projectLink" style={{ "--accent": project.accentColor }}>
+                <FaExternalLinkAlt size={16} /><span>{cta_live}</span>
               </a>
             )}
           </div>
@@ -252,6 +258,7 @@ const Projects = () => {
                 project={project}
                 cta_github={tr.cta_github}
                 cta_figma={tr.cta_figma}
+                cta_live={tr.cta_live}
                 index={i}
               />
             ))}
