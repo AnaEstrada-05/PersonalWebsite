@@ -38,7 +38,7 @@ export const t = {
         "Soccer",
       ],
       currentlyLabel: "Currently →",
-      currently: "Interning at Mentory Grupo Consultor, building React interfaces and finishing my CS degree at Tec de Monterrey.",
+      currently: "Product & UX/UI Designer at Hobi, designing and building the interface for a fintech app, after finishing my CS degree at Tec de Monterrey.",
       miniList: [
         "Frontend Dev & UX/UI Designer",
         "Tec de Monterrey · graduating 2026",
@@ -69,10 +69,10 @@ export const t = {
         {
           index: "02",
           type: "dev",
-          title: "Task Management Platform",
+          title: "Customer Self-Service Platform",
           subtitle: "AutoZone · Svelte + Figma",
           description:
-            "End-to-end project: designed full UX/UI in Figma — wireframes, user flows, visual system — then developed the frontend with Svelte and Git under SCRUM methodology.",
+            "End-to-end project: designed full UX/UI in Figma — wireframes, user flows, visual system — then developed the frontend with Svelte and Git under SCRUM methodology. Built tools for SKU price/availability lookup, cache clearing, PDF export, and call history.",
           tags: ["Svelte", "Figma", "SCRUM", "Git", "UI/UX Design"],
           github: "https://github.com/CustomerAutoZoneSelfService",
           figma: "https://www.figma.com/design/iVStNcoq2N6yBRxWj84CU4/CAZSS?node-id=0-1&p=f&t=oywAi7omPDQS9c3t-0",
@@ -152,6 +152,20 @@ export const t = {
       heading2: "EXPERTISE",
       categories: [
         {
+          id: "devTools",
+          title: "Dev Tools & Tech",
+          color: "#f472b6",
+          skills: [
+            { name: "Figma", level: "Advanced", color: "#a855f7" },
+            { name: "React.js", level: "Advanced", color: "#61dafb" },
+            { name: "Svelte", level: "Intermediate", color: "#ff3e00" },
+            { name: "Node.js", level: "Intermediate", color: "#22c55e" },
+            { name: "Tailwind", level: "Advanced", color: "#06b6d4" },
+            { name: "Git", level: "Advanced", color: "#ef4444" },
+            { name: "MySQL", level: "Intermediate", color: "#3b82f6" },
+          ],
+        },
+        {
           id: "programmingLanguages",
           title: "Programming Languages",
           color: "#60a5fa",
@@ -161,20 +175,6 @@ export const t = {
             { name: "Python", level: "Intermediate", color: "#22c55e" },
             { name: "C++", level: "Intermediate", color: "#a855f7" },
             { name: "SQL", level: "Intermediate", color: "#f97316" },
-          ],
-        },
-        {
-          id: "devTools",
-          title: "Dev Tools & Tech",
-          color: "#f472b6",
-          skills: [
-            { name: "React.js", level: "Advanced", color: "#61dafb" },
-            { name: "Node.js", level: "Intermediate", color: "#22c55e" },
-            { name: "Svelte", level: "Intermediate", color: "#ff3e00" },
-            { name: "Tailwind", level: "Advanced", color: "#06b6d4" },
-            { name: "Git", level: "Advanced", color: "#ef4444" },
-            { name: "MySQL", level: "Intermediate", color: "#3b82f6" },
-            { name: "Figma", level: "Advanced", color: "#a855f7" },
           ],
         },
         {
@@ -243,7 +243,7 @@ export const t = {
         "Fútbol",
       ],
       currentlyLabel: "Actualmente →",
-      currently: "Practicante en Mentory Grupo Consultor, construyendo interfaces en React y terminando mi carrera en Tec de Monterrey.",
+      currently: "Product & UX/UI Designer en Hobi, diseñando y construyendo la interfaz de una app fintech, después de terminar mi carrera en Tec de Monterrey.",
       miniList: [
         "Frontend Dev & UX/UI Designer",
         "Tec de Monterrey · graduación 2026",
@@ -274,10 +274,10 @@ export const t = {
         {
           index: "02",
           type: "dev",
-          title: "Plataforma de Gestión de Tareas",
+          title: "Plataforma de Autoservicio para Clientes",
           subtitle: "AutoZone · Svelte + Figma",
           description:
-            "Proyecto completo: diseñé toda la UX/UI en Figma — wireframes, flujos de usuario, sistema visual — y desarrollé el frontend con Svelte y Git bajo metodología SCRUM.",
+            "Proyecto completo: diseñé toda la UX/UI en Figma — wireframes, flujos de usuario, sistema visual — y desarrollé el frontend con Svelte y Git bajo metodología SCRUM. Incluye consulta de precio/disponibilidad por SKU, limpieza de caché, exportación a PDF e historial de llamadas.",
           tags: ["Svelte", "Figma", "SCRUM", "Git", "UI/UX Design"],
           github: "https://github.com/CustomerAutoZoneSelfService",
           figma: "https://www.figma.com/design/iVStNcoq2N6yBRxWj84CU4/CAZSS?node-id=0-1&p=f&t=oywAi7omPDQS9c3t-0",
@@ -357,6 +357,20 @@ export const t = {
       heading2: "HABILIDADES",
       categories: [
         {
+          id: "devTools",
+          title: "Herramientas",
+          color: "#f472b6",
+          skills: [
+            { name: "Figma", level: "Avanzado", color: "#a855f7" },
+            { name: "React.js", level: "Avanzado", color: "#61dafb" },
+            { name: "Svelte", level: "Intermedio", color: "#ff3e00" },
+            { name: "Node.js", level: "Intermedio", color: "#22c55e" },
+            { name: "Tailwind", level: "Avanzado", color: "#06b6d4" },
+            { name: "Git", level: "Avanzado", color: "#ef4444" },
+            { name: "MySQL", level: "Intermedio", color: "#3b82f6" },
+          ],
+        },
+        {
           id: "programmingLanguages",
           title: "Lenguajes",
           color: "#60a5fa",
@@ -366,20 +380,6 @@ export const t = {
             { name: "Python", level: "Intermedio", color: "#22c55e" },
             { name: "C++", level: "Intermedio", color: "#a855f7" },
             { name: "SQL", level: "Intermedio", color: "#f97316" },
-          ],
-        },
-        {
-          id: "devTools",
-          title: "Herramientas",
-          color: "#f472b6",
-          skills: [
-            { name: "React.js", level: "Avanzado", color: "#61dafb" },
-            { name: "Node.js", level: "Intermedio", color: "#22c55e" },
-            { name: "Svelte", level: "Intermedio", color: "#ff3e00" },
-            { name: "Tailwind", level: "Avanzado", color: "#06b6d4" },
-            { name: "Git", level: "Avanzado", color: "#ef4444" },
-            { name: "MySQL", level: "Intermedio", color: "#3b82f6" },
-            { name: "Figma", level: "Avanzado", color: "#a855f7" },
           ],
         },
         {
