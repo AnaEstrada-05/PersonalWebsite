@@ -14,6 +14,7 @@ import imgBookIt     from "../../assets/PaginaBookIt.png";
 import imgMujeres    from "../../assets/PaginaMujeres.png";
 import imgEmprendemos from "../../assets/PaginaEmprendemos.png";
 import imgHemara from "../../assets/Hemara.png";
+import imgKinalia from "../../assets/Kinalia.png";
 
 const projectImages = {
   "01": imgRetiro,
@@ -23,6 +24,7 @@ const projectImages = {
   "05": imgMujeres,
   "06": imgEmprendemos,
   "07": imgHemara,
+  "08": imgKinalia,
 };
 
 // ── Placeholder shapes per project index ──────────────────
