@@ -33,9 +33,7 @@ const projectImages = {
 // center/edge crop cuts off important content (logo, nav, headline).
 // For those, show the full screenshot un-cropped (object-fit: contain)
 // on a matching background instead of cropping it.
-const projectImageContain = {
-  "08": "#0a0e1a",
-};
+const projectImageContain = {};
 
 // ── Placeholder shapes per project index ──────────────────
 const PlaceholderShapes = ({ index, accentColor }) => (
