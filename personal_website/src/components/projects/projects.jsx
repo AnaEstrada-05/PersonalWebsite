@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { FaGithub, FaFigma } from "react-icons/fa";
+import { FaGithub, FaFigma, FaExternalLinkAlt } from "react-icons/fa";
 import { useLang } from "../../context/LanguageContext";
 import { t } from "../../i18n/translations";
 import "./projects.css";
@@ -13,6 +13,8 @@ import imgBookIt     from "../../assets/PaginaBookIt.png";
 import imgMujeres    from "../../assets/PaginaMujeres.png";
 import imgEmprendemos from "../../assets/PaginaEmprendemos.png";
 import imgHemara from "../../assets/Hemara.png";
+import imgKinalia from "../../assets/Kinalia.png";
+import imgRopeMaster from "../../assets/RopeMaster.png";
 
 const projectImages = {
   "01": imgRetiro,
@@ -21,7 +23,15 @@ const projectImages = {
   "05": imgMujeres,
   "06": imgEmprendemos,
   "07": imgHemara,
+  "08": imgKinalia,
+  "09": imgRopeMaster,
 };
+
+// Some screenshots are much wider than the 4:3 card ratio, so a plain
+// center/edge crop cuts off important content (logo, nav, headline).
+// For those, show the full screenshot un-cropped (object-fit: contain)
+// on a matching background instead of cropping it.
+const projectImageContain = {};
 
 // ── Placeholder shapes per project index ──────────────────
 const PlaceholderShapes = ({ index, accentColor }) => (
@@ -51,7 +61,7 @@ const PlaceholderShapes = ({ index, accentColor }) => (
 );
 
 // ── Big featured card (dev projects) ──────────────────────
-const FeaturedCard = ({ project, cta_github, cta_figma, index }) => {
+const FeaturedCard = ({ project, cta_github, cta_figma, cta_live, index }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   const image = projectImages[project.index];
@@ -66,10 +76,15 @@ const FeaturedCard = ({ project, cta_github, cta_figma, index }) => {
     >
       <div
         className="projectVisual"
-        style={{ background: image ? "#000" : project.gradient }}
+        style={{ background: image ? (projectImageContain[project.index] || "#000") : project.gradient }}
       >
         {image ? (
-          <img src={image} alt={project.title} className="projectScreenshot" />
+          <img
+            src={image}
+            alt={project.title}
+            className="projectScreenshot"
+            style={projectImageContain[project.index] ? { objectFit: "contain" } : undefined}
+          />
         ) : (
           <>
             <div className="projectNoise" />
@@ -91,6 +106,12 @@ const FeaturedCard = ({ project, cta_github, cta_figma, index }) => {
               <a href={project.figma} target="_blank" rel="noopener noreferrer"
                 className="projectLink" style={{ "--accent": project.accentColor }}>
                 <FaFigma size={18} /><span>{cta_figma}</span>
+              </a>
+            )}
+            {project.live && (
+              <a href={project.live} target="_blank" rel="noopener noreferrer"
+                className="projectLink" style={{ "--accent": project.accentColor }}>
+                <FaExternalLinkAlt size={16} /><span>{cta_live}</span>
               </a>
             )}
           </div>
@@ -115,7 +136,7 @@ const FeaturedCard = ({ project, cta_github, cta_figma, index }) => {
 };
 
 // ── Small design card (UX/UI projects grid) ───────────────
-const DesignCard = ({ project, cta_figma, cardIndex }) => {
+const DesignCard = ({ project, cta_figma, cta_live, cardIndex }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.15 });
   const image = projectImages[project.index];
@@ -149,6 +170,12 @@ const DesignCard = ({ project, cta_figma, cardIndex }) => {
               <a href={project.figma} target="_blank" rel="noopener noreferrer"
                 className="projectLink" style={{ "--accent": project.accentColor }}>
                 <FaFigma size={18} /><span>{cta_figma}</span>
+              </a>
+            )}
+            {project.live && (
+              <a href={project.live} target="_blank" rel="noopener noreferrer"
+                className="projectLink" style={{ "--accent": project.accentColor }}>
+                <FaExternalLinkAlt size={16} /><span>{cta_live}</span>
               </a>
             )}
           </div>
@@ -250,6 +277,7 @@ const Projects = () => {
                 project={project}
                 cta_github={tr.cta_github}
                 cta_figma={tr.cta_figma}
+                cta_live={tr.cta_live}
                 index={i}
               />
             ))}
@@ -278,6 +306,7 @@ const Projects = () => {
                   key={project.index}
                   project={project}
                   cta_figma={tr.cta_figma}
+                  cta_live={tr.cta_live}
                   cardIndex={i}
                 />
               ))}
