@@ -8,7 +8,6 @@ import "./projects.css";
 // ── Importa tus imágenes aquí ──────────────────────────────
 // Descomenta cada línea cuando tengas el screenshot listo en src/assets/
 import imgRetiro from "../../assets/PaginaPlanRetiro.png";
-import imgAutozone   from "../../assets/Autozone.png";
 import imgHobi       from "../../assets/Hobi.png";
 import imgBookIt     from "../../assets/PaginaBookIt.png";
 import imgMujeres    from "../../assets/PaginaMujeres.png";
@@ -17,7 +16,6 @@ import imgHemara from "../../assets/Hemara.png";
 
 const projectImages = {
   "01": imgRetiro,
-  "02": imgAutozone,
   "03": imgHobi,
   "04": imgBookIt,
   "05": imgMujeres,

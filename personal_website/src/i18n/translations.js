@@ -67,19 +67,6 @@ export const t = {
           accentColor: "#a78bfa",
         },
         {
-          index: "02",
-          type: "dev",
-          title: "Task Management Platform",
-          subtitle: "AutoZone · Svelte + Figma",
-          description:
-            "End-to-end project: designed full UX/UI in Figma — wireframes, user flows, visual system — then developed the frontend with Svelte and Git under SCRUM methodology.",
-          tags: ["Svelte", "Figma", "SCRUM", "Git", "UI/UX Design"],
-          github: "https://github.com/CustomerAutoZoneSelfService",
-          figma: "https://www.figma.com/design/iVStNcoq2N6yBRxWj84CU4/CAZSS?node-id=0-1&p=f&t=oywAi7omPDQS9c3t-0",
-          gradient: "linear-gradient(135deg, #0d1117 0%, #1a2744 40%, #0e4429 70%, #1a7f37 100%)",
-          accentColor: "#4ade80",
-        },
-        {
           index: "03",
           type: "dev",
           title: "Hobi",
@@ -270,19 +257,6 @@ export const t = {
           figma: null,
           gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #533483 100%)",
           accentColor: "#a78bfa",
-        },
-        {
-          index: "02",
-          type: "dev",
-          title: "Plataforma de Gestión de Tareas",
-          subtitle: "AutoZone · Svelte + Figma",
-          description:
-            "Proyecto completo: diseñé toda la UX/UI en Figma — wireframes, flujos de usuario, sistema visual — y desarrollé el frontend con Svelte y Git bajo metodología SCRUM.",
-          tags: ["Svelte", "Figma", "SCRUM", "Git", "UI/UX Design"],
-          github: "https://github.com/CustomerAutoZoneSelfService",
-          figma: "https://www.figma.com/design/iVStNcoq2N6yBRxWj84CU4/CAZSS?node-id=0-1&p=f&t=oywAi7omPDQS9c3t-0",
-          gradient: "linear-gradient(135deg, #0d1117 0%, #1a2744 40%, #0e4429 70%, #1a7f37 100%)",
-          accentColor: "#4ade80",
         },
         {
           index: "03",
